@@ -1,0 +1,70 @@
+.addclass {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: .4em;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, .3);
+    border-radius: 10px;
+
+}
+
+.addclass form {
+    margin: 2em;
+    text-align: center;
+}
+
+.addclass form button {
+    background-color: #35d200;
+    border: 2px solid #35d200;
+    padding: 15px 12px;
+    width: 50%;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, .3);
+    transition: .5s;
+    margin: .2em;
+}
+
+.addclass form button:hover {
+    background-color: transparent;
+    color: #35d200;
+}
+
+.classes {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column
+}
+
+.classes h1 {
+    flex: 100%;
+}
+
+.classes>div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    width: 400px;
+    border-radius: 10px;
+    padding: 1em;
+    margin: .4em;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, .3);
+}
+
+.classes button {
+    background-color: #bb0000;
+    border: 2px solid #bb0000;
+    border-radius: 10px;
+    color: #fff;
+    padding: 10px 12px;
+    transition: .5s;
+}
+
+.classes button:hover {
+    background-color: transparent;
+    color: #bb0000;
+}

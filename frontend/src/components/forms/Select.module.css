@@ -1,0 +1,9 @@
+.select{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.select label {
+    font-weight: bold;
+    margin-right: .8em;
+}

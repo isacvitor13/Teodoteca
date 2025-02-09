@@ -1,0 +1,41 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    /* box-sizing: content-box; */
+    box-sizing: border-box;
+    font-family: Helvetica;
+}
+
+h1,
+h2 {
+    font-size: 2em;
+    margin: .8em;
+    font-weight: bold;
+    color: #19457d;
+}
+
+.bold {
+    font-weight: bold;
+    color: #19457d;
+    margin: .8em;
+    margin-left: 0px;
+}
+
+.go_back{
+    text-decoration: none;
+    font-size: 20px;
+    border: none;
+    border-left: 4px solid #19457d;
+    color: #19457d;
+    background-color: transparent;
+    padding: .2em;
+    /* position: fixed; */
+}
+
+.db_error{
+    text-align: center;
+  padding: 4em 0;
+    color: #bb0000;
+}
+
+

@@ -1,0 +1,134 @@
+.info_container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.info_section {
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, .6);
+    padding: .4em;
+    border-radius: 10px;
+
+}
+
+.info_container img {
+    max-height: 300px;
+    margin: .8em;
+}
+
+.actions_book {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    align-self: flex-end;
+    flex-wrap: wrap;
+    width: 22%;
+}
+
+.actions_book a,
+.actions_book button {
+    align-self: flex-end;
+    justify-content: left;
+    padding: 12px 16px;
+    border-radius: 10px;
+    color: #fff;
+    text-decoration: none;
+    transition: .5s;
+    font-size: 16px;
+    text-align: center;
+    margin: .4em;
+}
+
+.actions_book a {
+    background-color: #35d200;
+    border: 2px solid #35d200;
+}
+
+.actions_book>button {
+    background-color: #d20000;
+    border: 2px solid #d20000;
+
+}
+
+.actions_book>button:hover {
+    background-color: transparent;
+    color: #d20000;
+
+}
+
+
+.actions_book>a:hover {
+    background-color: transparent;
+    color: #35d200;
+}
+
+.students {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2em;
+}
+
+.students h2 {
+    flex: 100%;
+}
+
+
+.student_header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    text-align: center;
+    padding: .8em;
+    border-bottom: 2px solid #000;
+    border-radius: 10px;
+}
+
+.student_header img {
+    height: 100px;
+    margin-bottom: .6em;
+}
+
+.student_header div p,
+.student_header div h3 {
+    margin-bottom: .2em;
+}
+
+.student_header div p a,
+.student_header div h3 a {
+    text-decoration: none;
+    /* background-color: #d20000; */
+}
+
+
+.student_header button {
+    background-color: #35d200;
+    padding: 10px 16px;
+    font-size: 10px;
+    border-radius: 10px;
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid #35d200;
+    transition: .5s;
+    margin-bottom: .8em;
+}
+
+.student_header button:hover {
+    border-color: #d20000;
+    color: #d20000;
+    background-color: transparent;
+}
+
+.servant {
+    font-size: 10px;
+}
+
+.expired {
+    color: #d20000;
+}
+
+.no_expired {
+    color: #35d200;
+}

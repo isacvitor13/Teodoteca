@@ -1,0 +1,164 @@
+.loan {
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, .6);
+    padding: .8em;
+    border-radius: 10px;
+    min-height: 75vh;
+    user-select: none;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.end_step {
+    background-color: #35d200;
+}
+
+.step>div {
+    background-color: #1956d9;
+    height: 5px;
+    width: 30%;
+    margin: .4em;
+    border-radius: 10px;
+    margin: .8em;
+}
+
+.step>div:nth-child(2) {
+    background-color: #cfd200;
+}
+
+.step>div:nth-child(3) {
+    background-color: #35d200;
+}
+
+.actions_loan {
+    background-color: #35d200;
+    padding: 20px 60px;
+    border: 2px solid #35d200;
+    border-radius: 10px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    margin-left: 2em;
+    transition: .5s;
+   
+}
+
+.actions_loan:hover {
+    background-color: transparent;
+    color: #35d200;
+}
+
+.book_loan>div {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    transition: .5s;
+}
+
+.select_student_header div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-bottom: 2em;
+    margin-bottom: 2em;
+
+}
+
+.select_student_header input {
+    width: 400px;
+    height: 50px;
+    border: 2px solid #c3c3c3;
+    border-radius: 10px;
+    padding: 2em;
+}
+
+.select_student {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: .4em;
+}
+
+.selected_student {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin: .4em;
+    padding: .4em;
+    width: 22%;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, .1);
+  min-width: 300px;
+}
+
+.selected_student * {
+    margin-bottom: .2em;
+}
+
+.select_student img {
+    height: 100px;
+}
+
+.confirm_loan>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.confirm_loan>div>span {
+    font-size: 80px;
+}
+
+.confirm_loan>div>div {
+    text-align: center;
+}
+
+.confirm_loan>div button:nth-child(1) {
+    background-color: #bb0000;
+    padding: 20px 60px;
+    border: 2px solid #bb0000;
+    border-radius: 10px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    margin-left: 2em;
+    transition: .5s;
+
+}
+
+.confirm_loan>div button:nth-child(1):hover {
+    color: #bb0000;
+    background-color: transparent;
+}
+
+.confirm_loan>div button:nth-child(2) {
+    background-color: #35d200;
+    padding: 20px 60px;
+    border: 2px solid #35d200;
+    border-radius: 10px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    margin-left: 2em;
+    transition: .5s;
+
+}
+
+.confirm_loan>div button:nth-child(2):hover {
+    background-color: transparent;
+    color: #35d200;
+}
+
+.confirm_loan img {
+    height: 300px;
+}

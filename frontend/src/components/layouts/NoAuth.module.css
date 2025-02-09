@@ -1,0 +1,29 @@
+.noAuth {
+    height: 65vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.noAuth h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.noAuth a {
+    background-color: #005bd2;
+    text-decoration: none;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, .6);
+    margin: .4em;
+    transition: .5s;
+}
+
+.noAuth a:hover {
+    transform: scale(1.2);
+}

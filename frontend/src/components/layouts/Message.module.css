@@ -1,0 +1,39 @@
+.message {
+    background-color: #19427d;
+    padding: 1em 1em;
+    border-radius: 10px;
+    transition: .5s;
+    border: 1px solid #fff;
+    text-align: center;
+    color: #fff;
+    width: 25%;
+    position: fixed;
+    margin: .8em 2em;
+    transition: .5s;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, .6);
+    animation: deladinho .5s ease-in forwards;
+}
+
+.error {
+    background-color: #7d1919;
+    border: 2px solid #dd5858;
+    border-right: 5px solid #dd5858;
+}
+
+.sucess {
+    background-color: #197d32;
+    border: 2px solid #58dd8f;
+    border-right: 5px solid #58dd8f;
+}
+
+@keyframes deladinho {
+    from {
+        right: -200px;
+
+    }
+
+    to {
+        right: 10px;
+    }
+
+}

@@ -1,0 +1,59 @@
+.student_section {
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, .6);
+    padding: 1em;
+    border-radius: 10px;
+    min-height: 65vh;
+}
+
+.info_student_container img {
+    max-height: 200px;
+}
+
+.info_student_container>div {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    /* background-color: red; */
+    padding: 2em 0;
+    border-bottom: 2px solid rgba(110, 110, 110, 0.6);
+}
+
+.info_student_container>div>div>div:nth-child(1) {
+    flex: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.actions a,
+.actions button {
+
+    padding: 8px 32px;
+    font-size: 16px;
+    border-radius: 10px;
+    color: #fff;
+    text-decoration: none;
+
+    transition: .5s;
+    margin: .4em;
+}
+
+.actions a {
+    background-color: #35d200;
+    border: 2px solid #35d200;
+}
+
+.actions a:hover {
+    color: #35d200;
+    background-color: transparent;
+}
+
+.actions button {
+    background-color: #bb0000;
+    border: 2px solid #bb0000;
+}
+
+.actions button:hover {
+    background-color: transparent;
+    color: #bb0000;
+}
