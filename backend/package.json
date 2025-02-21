@@ -5,7 +5,7 @@
   "main": "inde.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"nodemon ./index.js localhost 5000"
+    "start": "nodemon ./index.js localhost 5000"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +15,8 @@
     "cors": "^2.8.5",
     "express": "^4.21.2",
     "jsonwebtoken": "^9.0.2",
-    "nodemon": "^3.1.9"
+    "mongoose": "^8.10.1",
+    "nodemon": "^3.1.9",
+    "teodoteca": "file:.."
   }
 }
