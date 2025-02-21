@@ -80,9 +80,9 @@ function InfoStudent() {
         let msgType = 'sucess'
 
         const data = await api.delete(`student/${id}`,{
-            headers:{
-                Authorization:`Bearer ${JSON.parse(token)}`
-            })
+            headers: {
+                Authorization: `Bearer ${JSON.parse(token)}`
+            }})
             .then((resposne) => {
                 return resposne.data
             }).catch((error) => {
