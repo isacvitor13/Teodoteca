@@ -53,7 +53,7 @@ module.exports = class StudentControllers {
             return
         }
         // verifica se o número da matrícula está correto
-        if (student_registration.length !== 7) {
+        if (student_registration.toString().length !== 7) {
             res.status(422).json({ message: 'O número da matrícula deve conter 7 dígitos' })
             return
         }
