@@ -2,7 +2,7 @@ import api from '../../../utils/api'
 import useFlashMessage from '../../../hooks/useFlashMessage.js'
 
 import BookForm from '../../forms/BookForm.js'
-import { useContext, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import styles from './Create.module.css'
 import { Context } from '../../../context/Context.js'
@@ -13,7 +13,14 @@ function CreateBook() {
     const { setFlashMessage } = useFlashMessage()
     const { authenticaded } = useContext(Context)
     const navigate = useNavigate()
+    const [external_Book, setExternal_Book] = useState({})
 
+
+    // useEffect(() => {
+    //     fetch().then((response) => {
+    //         console.log(response.data)
+    //     })
+    // }, [])
     async function Create(book) {
         let msgType = 'sucess'
         const data = await api.post('/book/create', book, {

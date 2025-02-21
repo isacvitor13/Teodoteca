@@ -4,8 +4,12 @@
   "description": "",
   "main": "inde.js",
   "scripts": {
+<<<<<<< HEAD
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon ./index.js localhost 5000"
+=======
+    "test": "echo \"Error: no test specified\" && exit 1"
+>>>>>>> 3e1cf2d3c9eaf7ed17af7c31b5b8e94d95a4112f
   },
   "keywords": [],
   "author": "",

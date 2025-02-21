@@ -59,6 +59,14 @@ function BookForm({ HandleOnChange, msgButton, bookdata }) {
                     />
 
                     <Input
+                        text='Image'
+                        name='image'
+                        type='link'
+                        value={book.image || ''}
+                        HandleOnChange={HandleChange}
+                        placeholder='Insira o link da imagem:'
+                    />
+                    <Input
                         text='ISBN*'
                         name='isbn'
                         type='number'
@@ -75,7 +83,7 @@ function BookForm({ HandleOnChange, msgButton, bookdata }) {
                         placeholder='Insira a quantidade deste livro::'
                     />
                 </div>
-                    <button type='submit'  >{msgButton}</button>
+                <button type='submit'  >{msgButton}</button>
             </form>
         </section>
     )
