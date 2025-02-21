@@ -1,6 +1,6 @@
 const express = require('express')
 const cors = require('cors')
-
+const port =5000
 const app = express()
 
 // app.use(cors())
@@ -27,4 +27,4 @@ app.use('/loan', LoanRouter)
 const Classroons = require('./routes/ClassroonsRouter')
 app.use('/class', Classroons)
 
-app.listen(9001, () => console.log('Rodando!'))
+app.listen(port, () => console.log(`Rodando na ${port}!`))

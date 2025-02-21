@@ -36,7 +36,7 @@ module.exports = class BookControllers {
             return
         }
 
-        if (isbn.length !== 13) {
+        if (isbn.toString().length !== 13) {
             res.status(422).json({ message: 'O ISBN deve conter 13 dígitos!' })
             return
         }

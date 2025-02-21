@@ -2,6 +2,7 @@ const Student = require('../models/Students')
 const Classroons = require('../models/Classroons')
 const Book = require('../models/Books')
 const ObjectId = require('mongoose').Types.ObjectId
+
 module.exports = class StudentControllers {
 
     static async create(req, res) {
@@ -150,7 +151,7 @@ module.exports = class StudentControllers {
     }
 
     static async UpdateStudentById(req, res) {
-
+console.log(req.body)
         const id = req.params.id
         const { name, email, phone, student_registration, cpf, gender, student_class } = req.body
         const student = await Student.findById(id)
@@ -205,7 +206,7 @@ module.exports = class StudentControllers {
         }
 
         //verifica se o número da matrícula está correto
-        if (student_registration.length !== 7) {
+        if (student_registration.toString().length !== 7) {
             res.status(422).json({ message: 'Número da matrícula deve conter 7 dígitos!' })
             return
         }

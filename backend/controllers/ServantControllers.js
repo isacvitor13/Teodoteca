@@ -30,6 +30,13 @@ module.exports = class ServantControllers {
             res.status(422).json({ message: 'Insira um email válido' })
             return
         }
+
+        const emailExists = await Servant.findOne({ email: email })
+        if (emailExists) {
+            res.status(422).json({ message: 'Já existe usuário com este email já existe!' })
+            return
+        }
+
         if (!password) {
             res.status(422).json({ message: 'A senha é obrigatória!' })
             return
