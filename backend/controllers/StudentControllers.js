@@ -69,6 +69,7 @@ module.exports = class StudentControllers {
             res.status(422).json({ message: 'O CPF é obrigatório!' })
             return
         }
+      
         if (cpf.length !== 11) {
             res.status(422).json({ message: 'O CPF deve conter 11 dígitos' })
             return
