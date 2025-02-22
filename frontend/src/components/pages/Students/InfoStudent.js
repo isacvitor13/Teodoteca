@@ -84,6 +84,7 @@ function InfoStudent() {
                 Authorization:`Bearer ${JSON.parse(token)}`
             }
         })
+
             .then((resposne) => {
                 return resposne.data
             }).catch((error) => {
