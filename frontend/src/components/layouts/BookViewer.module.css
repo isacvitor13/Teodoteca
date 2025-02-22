@@ -4,8 +4,8 @@
     align-items: center;
     flex-direction: column;
     margin: 2em;
-   min-width: 300px;
-   max-width: 320px;
+    min-width: 300px;
+    max-width: 320px;
     height: 400px;
     border: 2px solid #19579d;
     border-radius: 10px;
@@ -99,4 +99,10 @@ span {
 
 .actions>p {
     color: #bb0000;
+}
+
+@media (max-width:768px) {
+    .book_container {
+        min-width: 40vw ;
+    }
 }

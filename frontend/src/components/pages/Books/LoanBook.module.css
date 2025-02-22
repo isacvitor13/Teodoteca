@@ -131,7 +131,7 @@
     color: #fff;
     display: flex;
     align-items: center;
-    margin-left: 2em;
+    margin: 2em 1em;
     transition: .5s;
 
 }
@@ -149,7 +149,7 @@
     color: #fff;
     display: flex;
     align-items: center;
-    margin-left: 2em;
+    margin-left: 2em 1em;
     transition: .5s;
 
 }

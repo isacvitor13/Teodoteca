@@ -8,8 +8,8 @@
 
 .form_container form {
     box-shadow: 2px 2px 8px rgba(0, 0, 0, .6);
-    margin: .4em;
-    padding: 1em;
+    /* margin: .4em; */
+    /* padding: 1em; */
     border-radius: 10px;
     text-align: center;
 }

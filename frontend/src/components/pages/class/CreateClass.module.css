@@ -68,3 +68,9 @@
     background-color: transparent;
     color: #bb0000;
 }
+
+@media (max-width:768px) {
+    .classes>div{
+        width: 80vw;
+    }
+}

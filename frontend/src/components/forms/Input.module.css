@@ -16,7 +16,7 @@
 
 .input_control input,select {
     
-    padding: 1em;
+    padding: 1vw;
     border: 2.5px solid #ccc;
     border-radius: 5px;
 }
@@ -29,4 +29,9 @@
     width: 400px;
 }
 
-
+    
+@media (max-width:768px) {
+    .input_control select,.input_control input{
+        width: 80vw;
+    }
+}

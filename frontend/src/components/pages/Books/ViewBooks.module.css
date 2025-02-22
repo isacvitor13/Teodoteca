@@ -26,7 +26,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0px 2em;
+    flex-wrap: wrap;
+    padding: 0px 2vw;
 
 
     & a {
@@ -40,6 +41,7 @@
         transition: .5s;
         display: flex;
         align-items: center;
+        margin: .4em;
     }
 
     & a svg {
@@ -52,7 +54,7 @@
     }
 
     & input {
-        width: 400px;
+        width: 40vw;
         height: 50px;
         border: 2px solid #c3c3c3;
         border-radius: 10px;
@@ -61,4 +63,11 @@
 
     }
 
+}
+
+.list_books {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
