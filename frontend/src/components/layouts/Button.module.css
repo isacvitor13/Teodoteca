@@ -1,0 +1,14 @@
+.button__container{
+
+    & button{
+        background-color: #35d200;
+        border: 2px solid #35d200;
+        padding: 15px 12px;
+        width: 50%;
+        color: #fff;
+        border-radius: 10px;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, .3);
+        transition: .5s;
+        margin: .2em;
+    }
+}

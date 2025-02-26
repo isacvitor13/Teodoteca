@@ -1,5 +1,5 @@
 import axios from 'axios'
-
 export default axios.create({
-    baseURL:'https://teodoteca.onrender.com',
+    baseURL:'https://teodoteca.vercel.app',
+    // baseURL:'http://localhost:5000',
 })

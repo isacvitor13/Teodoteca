@@ -5,7 +5,7 @@ const app = express()
 
 // app.use(cors())
 
-app.use(cors({ credentials: true, origin: 'https://teodoteca.vercel.app' }))
+app.use(cors({ credentials: true, origin: ['https://teodoteca.vercel.app',"http://localhost:3000"] }))
 app.use(express.json())
 app.use(express.static('public'))
 

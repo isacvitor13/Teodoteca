@@ -12,12 +12,14 @@ import { Context } from '../../../context/Context'
 import Select from '../../forms/Select'
 import NoAUth from '../../layouts/NoAuth'
 import styles from './CreateClass.module.css'
+import Button from '../../layouts/Button'
 
 function CreateClass() {
     const { authenticaded } = useContext(Context)
     const [school_class, setSchool_class] = useState({})
     const [classes, setClasses] = useState([])
-   
+    const [buttonCLicked, setButtonClicked] = useState(false)
+
     const [token] = useState(localStorage.getItem('token'))
     const { setFlashMessage } = useFlashMessage()
     const navigate = useNavigate()
@@ -44,7 +46,7 @@ function CreateClass() {
 
     async function HandleOnSubmit(e) {
         e.preventDefault()
-
+        setButtonClicked(true)
         let msgType = 'sucess'
 
         const classroonsStructure = {
@@ -59,9 +61,13 @@ function CreateClass() {
             return response.data
         }).catch((error) => {
             msgType = 'error'
+
+
+            setButtonClicked(false)
+
+
             return error.response.data
         })
-
 
         if (msgType !== 'error') {
             navigate('/')
@@ -145,7 +151,22 @@ function CreateClass() {
                         options={bout}
                     />
 
-                    <button type='submit'>Criar</button>
+
+
+
+                    {/* <button  disabled={buttonCLicked} type='submit'>Criar</button> */}
+
+
+
+
+                    <Button
+                        type='submit'
+                        text='Criar'
+
+                        handleClickSubmit={setButtonClicked}
+                        handleClick={buttonCLicked}
+                    />
+                    {/* <button type='submit'>Criar</button> */}
                 </form>
 
 
