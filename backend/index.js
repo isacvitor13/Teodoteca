@@ -3,7 +3,7 @@ const cors = require('cors')
 const port =5000
 const app = express()
 
-// app.use(cors())
+app.use(cors())
 
 app.use(cors({ credentials: true, origin: ['https://teodoteca.vercel.app',"http://localhost:3000"] }))
 app.use(express.json())
