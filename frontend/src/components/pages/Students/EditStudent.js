@@ -17,6 +17,7 @@ function EditStudent() {
     const { authenticaded } = useContext(Context)
     const { id } = useParams()
     const [student, setStudent] = useState({})
+    const [updateStudentSucess, setUpdateStudentSucess] = useState(false)
     const { setFlashMessage } = useFlashMessage()
     const [token] = useState(localStorage.getItem('token') || '')
     const navigate = useNavigate()
@@ -34,7 +35,7 @@ function EditStudent() {
 
     async function UpdateStudent(student) {
         let msgType = 'sucess'
-
+        setUpdateStudentSucess(true)
         const data = await api.patch(`student/edit/${id}`, student, {
             headers: {
                 Authorization: `Bearer ${JSON.parse(token)}`
@@ -42,6 +43,7 @@ function EditStudent() {
         }).then((response) => {
             return response.data
         }).catch((error) => {
+            setUpdateStudentSucess(false)
             msgType = 'error'
             return error.response.data
         })
@@ -59,7 +61,12 @@ function EditStudent() {
                 <Link className='go_back' to={`/student/${id}`}>Voltar</Link>
                 {student.name ? (<>
                     <h1>Editando {student.name}</h1>
-                    <StudentForm studentData={student} msgButton={'Editar'} HandleSubmit={UpdateStudent} />
+                    <StudentForm
+                        studentData={student}
+                        msgButton={'Editar'}
+                        HandleSubmit={UpdateStudent}
+                        CreateStudentSucess={updateStudentSucess}
+                    />
                     <Alert text='Ao confirmar a edição os dados do aluno serão atualizados em todo o sistema.
                 E por motivos de segurança o CPF só poderá ser alterado diretamente no Banco de dados.'
                         title='Atenção' />

@@ -162,7 +162,7 @@ function CreateClass() {
                     <Button
                         type='submit'
                         text='Criar'
-
+                        classCss='button__container'
                         handleClickSubmit={setButtonClicked}
                         handleClick={buttonCLicked}
                     />

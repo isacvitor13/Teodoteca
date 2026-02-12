@@ -18,6 +18,7 @@ function EditBook() {
     const navigate = useNavigate()
 
     const [book, setBook] = useState({})
+    const [UpdateBookSucess, setUpdateBookSucess] = useState(false)
 
     useEffect(() => {
         api.get(`/book/${id}`).then((response) => {
@@ -30,6 +31,7 @@ function EditBook() {
 
 
     async function UpdateBook(book) {
+        setUpdateBookSucess(true)
         let msgType = 'sucess'
         const data = await api.patch(`/book/edit/${id}`, book, {
             headers: {
@@ -38,6 +40,7 @@ function EditBook() {
         }).then((response) => {
             return response.data
         }).catch((error) => {
+            setUpdateBookSucess(false)
             msgType = 'error'
             return error.response.data
         })
@@ -60,7 +63,12 @@ function EditBook() {
                         {book.name && (
                             <>
                                 <h1>Editando o livro {book.name}</h1>
-                                <BookForm bookdata={book} HandleOnChange={UpdateBook} msgButton='Editar' />
+                                <BookForm
+                                    bookdata={book}
+                                    HandleOnChange={UpdateBook}
+                                    msgButton='Editar'
+                                    CreateBookSucess={UpdateBookSucess}
+                                />
                             </>
                         )}
                     </>

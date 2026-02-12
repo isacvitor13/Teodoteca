@@ -18,7 +18,7 @@
     padding: 20px;
 }
 
-.form_container form button {
+/* .form_container form button {
     background-color: #35d200;
     border: 2px solid #35d200;
     padding: 15px 12px;
@@ -33,4 +33,4 @@
 .form_container form button:hover {
     background-color: transparent;
     color: #35d200;
-}
+} */

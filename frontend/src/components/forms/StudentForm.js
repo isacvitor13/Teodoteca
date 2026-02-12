@@ -10,9 +10,10 @@ import Select from './Select'
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import styles from './FormContainer.module.css'
+import Button from '../layouts/Button'
 
 
-function StudentForm({ msgButton, HandleSubmit, studentData }) {
+function StudentForm({ msgButton, HandleSubmit, studentData, CreateStudentSucess }) {
     const gender = ['Masculino', 'Feminino']
     const [student, setStudent] = useState(studentData || {})
     const [classroons, setClassroons] = useState([])
@@ -129,8 +130,11 @@ function StudentForm({ msgButton, HandleSubmit, studentData }) {
                     />
                 </div>
 
-                <button type='submit'>{msgButton}</button>
-
+                <Button
+                    text={msgButton}
+                    handleClick={CreateStudentSucess}
+                    type='submit'
+                />
             </form>}
         </section>
     )

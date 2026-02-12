@@ -19,9 +19,10 @@ function CreateStudent() {
 
     const { setFlashMessage } = useFlashMessage()
     const navigate = useNavigate()
+    const [createSucess, setCreateSucess] = useState(false)
 
     async function HandleOnSubmit(student) {
-
+        setCreateSucess(true)
         let msgType = 'sucess'
 
         const data = await api.post('/student/create', student, {
@@ -33,6 +34,7 @@ function CreateStudent() {
             return response.data
 
         }).catch((error) => {
+            setCreateSucess(false)
             msgType = 'error'
             return error.response.data
         })
@@ -52,7 +54,7 @@ function CreateStudent() {
             {authenticaded ? (<>
                 <div>
                     <h1>Cadastrar aluno</h1>
-                    <StudentForm msgButton='Cadastrar aluno' HandleSubmit={HandleOnSubmit} />
+                    <StudentForm msgButton='Cadastrar aluno' HandleSubmit={HandleOnSubmit} CreateStudentSucess={createSucess} />
                 </div>
             </>) : (<NoAuth />)}
 

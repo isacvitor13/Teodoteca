@@ -6,6 +6,7 @@ const verifyToken = (req, res, next) => {
     if (!req.headers.authorization) {
         return res.status(401).json({ message: "Acesso negado!" })
     }
+ 
     const token = GetToken(req)
     if (!token) {
         return res.status(401).json({ message: "Acesso negado!" })

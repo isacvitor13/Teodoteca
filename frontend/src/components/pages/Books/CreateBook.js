@@ -14,14 +14,12 @@ function CreateBook() {
     const { authenticaded } = useContext(Context)
     const navigate = useNavigate()
     const [external_Book, setExternal_Book] = useState({})
+    const [CreateSucess,setCreateSucess]=useState(false)
 
 
-    // useEffect(() => {
-    //     fetch().then((response) => {
-    //         console.log(response.data)
-    //     })
-    // }, [])
+   
     async function Create(book) {
+        setCreateSucess(true)
         let msgType = 'sucess'
         const data = await api.post('/book/create', book, {
             headers: {
@@ -31,6 +29,7 @@ function CreateBook() {
             return response.data
         }).catch((error) => {
             msgType = 'error'
+            setCreateSucess(false)
             return error.response.data
         })
         setFlashMessage(data.message, msgType)
@@ -44,7 +43,10 @@ function CreateBook() {
         <section className={styles.create}>
             {authenticaded ? (<>
                 <h1>Cadastrar Livro</h1>
-                <BookForm msgButton='Cadastrar' HandleOnChange={Create} /* bookdata={book}*/ />
+                <BookForm 
+                msgButton='Cadastrar' 
+                HandleOnChange={Create} 
+                CreateBookSucess={CreateSucess} /* bookdata={book}*/ />
             </>) : (<NoAuth />)}
         </section>
     )

@@ -2,7 +2,10 @@ import Input from './Input'
 
 import { useState } from 'react'
 import styles from './FormContainer.module.css'
-function BookForm({ HandleOnChange, msgButton, bookdata }) {
+import Button from '../layouts/Button'
+
+
+function BookForm({ HandleOnChange, msgButton, bookdata, CreateBookSucess }) {
 
     const [book, setBook] = useState(bookdata || '')
 
@@ -83,7 +86,11 @@ function BookForm({ HandleOnChange, msgButton, bookdata }) {
                         placeholder='Insira a quantidade deste livro::'
                     />
                 </div>
-                <button type='submit'  >{msgButton}</button>
+                <Button
+                    type='submit'
+                    text={msgButton}
+                    handleClick={CreateBookSucess}
+                />
             </form>
         </section>
     )

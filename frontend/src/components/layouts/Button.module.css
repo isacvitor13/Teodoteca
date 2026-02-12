@@ -1,6 +1,6 @@
-.button__container{
+.button__container {
 
-    & button{
+    & button {
         background-color: #35d200;
         border: 2px solid #35d200;
         padding: 15px 12px;
@@ -10,5 +10,32 @@
         box-shadow: 2px 2px 8px rgba(0, 0, 0, .3);
         transition: .5s;
         margin: .2em;
+    }
+
+
+}
+
+
+.roda svg {
+    font-size: 20px;
+    animation-name: rodar;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rodar {
+    10% {
+
+        transform: rotate(0deg);
+        color: #fff;
+    }
+
+    50% {
+        color: #1957d9;
+    }
+
+    100% {
+        transform: rotate(360deg);
+        color: #fff;
     }
 }
